@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mckinleyslab.supercalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Please input your numbers \n and press an operator."
+        android:id="@+id/Instructions"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/numOne"
+        android:layout_below="@+id/Instructions"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/numTwo"
+        android:layout_below="@+id/numOne"
+        android:layout_alignEnd="@+id/numOne" />
+
+    <TableLayout
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/numTwo"
+        android:layout_alignStart="@+id/Instructions"
+        android:layout_alignEnd="@+id/Instructions">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="+"
+                android:id="@+id/addNum"
+                android:layout_below="@+id/numTwo"
+                android:layout_alignStart="@+id/numTwo"
+                android:onClick="onClickAdd"
+                android:layout_gravity="center_vertical"
+                android:layout_column="7"
+                android:layout_width="75dp" />
+
+            <Button
+                android:text="-"
+                android:id="@+id/subNum"
+                android:onClick="onClickSub"
+                android:layout_alignBottom="@+id/addNum"
+                android:layout_toEndOf="@+id/result"
+                android:layout_gravity="center_vertical"
+                android:layout_column="8"
+                android:layout_width="75dp" />
+
+            <Button
+                android:text="*"
+                android:id="@+id/mulNum"
+                android:onClick="onClickMul"
+                android:layout_alignBottom="@+id/addNum"
+                android:layout_toEndOf="@+id/result"
+                android:layout_gravity="center_vertical"
+                android:layout_column="9"
+                android:layout_width="75dp" />
+
+            <Button
+                android:text="/"
+                android:id="@+id/divNum"
+                android:onClick="onClickDiv"
+                android:layout_alignBottom="@+id/addNum"
+                android:layout_toEndOf="@+id/result"
+                android:layout_gravity="center_vertical"
+                android:layout_column="10"
+                android:layout_width="75dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="35px" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/emptyString"
+                android:id="@+id/result"
+                android:layout_below="@+id/numTwo"
+                android:layout_alignStart="@+id/numTwo"
+                android:layout_marginTop="31dp"
+                android:layout_gravity="bottom"
+                android:layout_column="7"
+                android:layout_span="4"
+                android:textAlignment="center" />
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

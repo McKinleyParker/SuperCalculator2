@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SuperCalculator</string>
+    <string name="emptyString" />
+</resources>
